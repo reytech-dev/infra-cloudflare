@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Etc/UTC"
+    labels:
+      - "dependencies"
+      - "area/cloudflare"
+    commit-message:
+      prefix: "chore(deps)"
+    open-pull-requests-limit: 5
+    groups:
+      providers:
+        patterns:
+          - "*"
