@@ -2,11 +2,11 @@ output "dns_records" {
   description = "Map of DNS record names to their Cloudflare resource attributes"
   value = {
     for k, r in cloudflare_dns_record.records : k => {
-      name     = r.hostname
-      type     = r.type
-      content  = r.content
-      proxied  = r.proxied
-      ttl      = r.ttl
+      name    = r.hostname
+      type    = r.type
+      content = r.content
+      proxied = r.proxied
+      ttl     = r.ttl
     }
   }
 }

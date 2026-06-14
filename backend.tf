@@ -14,7 +14,7 @@ terraform {
     #   -backend-config="skip_requesting_account_id=true"
     #   -backend-config="force_path_style=true"
 
-    encrypt        = true
-    use_lockfile   = true
+    encrypt      = true
+    use_lockfile = true
   }
 }
